@@ -10,9 +10,7 @@
 	width: 20em;
 }
 
-.root {
-	display: flex;
-}
+.root {}
 
 .nav {
 	display: flex;
@@ -34,7 +32,6 @@
 }
 
 .main-panel {
-	position: absolute; 
 	left: 0; 
 	right: 0; 
 	margin-left: auto; 
