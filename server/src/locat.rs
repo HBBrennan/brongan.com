@@ -106,7 +106,7 @@ struct Db {
 impl Db {
     async fn create(path: String) -> Result<Self, tokio_rusqlite::Error> {
         info!("Reading Sqlite3 db at: {}", path);
-        let connection = Connection::open_in_memory().await?;
+        let connection = Connection::open(path).await?;
         connection
             .call(|connection| {
                 // create analytics table
