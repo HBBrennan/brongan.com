@@ -3,7 +3,7 @@ use std::fmt::Display;
 
 pub mod mandelbrot;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub struct Analytics {
     pub ip_address: String,
     pub path: String,

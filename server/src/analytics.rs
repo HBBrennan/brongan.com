@@ -27,6 +27,7 @@ pub async fn analytics_get(
     headers: HeaderMap,
     State(state): State<ServerState>,
 ) -> Response<BoxBody> {
+    // Print something to the console
     let tracer = global::tracer("");
     let span = tracer.start("analytics_get");
     let analytics = state
